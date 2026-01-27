@@ -35,57 +35,9 @@ export default function Home() {
             </Link>
           </li>
 
-          {/* Week 4 
-          <li>
-            <Link
-              href="/week-4"
-              className="block p-3 bg-white rounded-lg shadow hover:bg-slate-50 hover:shadow-md transition-all text-slate-800 font-medium border border-gray-200"
-            >
-              Week 4 Assignment
-            </Link>
-          </li>
-
-          {/* Week 5 
-          <li>
-            <Link
-              href="/week-5"
-              className="block p-3 bg-white rounded-lg shadow hover:bg-slate-50 hover:shadow-md transition-all text-slate-800 font-medium border border-gray-200"
-            >
-              Week 5 Assignment
-            </Link>
-          </li>
-
-          {/* week 6 
-          <li>
-            <Link
-              href="/week-6"
-              className="block p-3 bg-white rounded-lg shadow hover:bg-slate-50 hover:shadow-md transition-all text-slate-800 font-medium border border-gray-200"
-            >
-              Week 6 Assignment
-            </Link>
-          </li>
-
-          {/* Week 7 
-          <li>
-            <Link
-              href="/week-7"
-              className="block p-3 bg-white rounded-lg shadow hover:bg-slate-50 hover:shadow-md transition-all text-slate-800 font-medium border border-gray-200"
-            >
-              Week 7 Assignment
-            </Link>
-          </li>
-
-          {/* week 8 
-          <li>
-            <Link
-              href="/week-8"
-              className="block p-3 bg-white rounded-lg shadow hover:bg-slate-50 hover:shadow-md transition-all text-slate-800 font-medium border border-gray-200"
-            >
-              Week 8 Assignment
-            </Link>
-          </li>*/}
         </ul>
       </div>
     </main>
   );
 }
+
