@@ -35,7 +35,7 @@ export default function Home() {
             </Link>
           </li>
 
-          {/* {/* Week 4 
+          {/* Week 4 
           <li>
             <Link
               href="/week-4"
@@ -84,10 +84,8 @@ export default function Home() {
               Week 8 Assignment
             </Link>
           </li>*/}
-
         </ul>
       </div>
     </main>
   );
 }
-
