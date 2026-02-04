@@ -25,12 +25,7 @@ export default function ItemList() {
           <ul className="flex flex-col gap-4">
             {}
             {groupedItems[category].map((item) => (
-              <Item
-                key={item.id}
-                name={item.name}
-                quantity={item.quantity}
-                category={item.category}
-              />
+              <Item key={item.id} {...item} />
             ))}
           </ul>
         </section>
