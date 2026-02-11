@@ -90,12 +90,10 @@ export default function GroceryItemList() {
 
   return (
     <>
-      {groceryItems.map((item, index) => (
+      {groceryItems.map((item) => (
         <GroceryItem
-          key={index}
-          name={item.name}
-          quantity={item.quantity}
-          category={item.category}
+          key={`${item.name}-${item.category}`}
+          {...item}
         />
       ))}
     </>
