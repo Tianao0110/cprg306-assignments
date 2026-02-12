@@ -44,6 +44,16 @@ export default function Home() {
               Week 4 Assignment
             </Link>
           </li>
+          
+          {/* Week 5 */}
+          <li>
+            <Link
+              href="/week-5"
+              className="block p-3 bg-white rounded-lg shadow hover:bg-slate-50 hover:shadow-md transition-all text-slate-800 font-medium border border-gray-200"
+            >
+              Week 5 Assignment
+            </Link>
+          </li>          
         </ul>
       </div>
     </main>
