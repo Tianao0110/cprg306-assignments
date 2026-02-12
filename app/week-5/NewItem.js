@@ -24,7 +24,6 @@ export default function NewItem() {
   };
 
   return (
-    // Form Container: 白色背景，圆角，阴影，看起来像一张卡片
     <form
       onSubmit={handleSubmit}
       className="w-full max-w-sm bg-white p-8 rounded-lg shadow-lg space-y-4"
