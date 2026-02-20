@@ -6,6 +6,21 @@ export default function NewItem() {
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState("produce");
 
+  // Programmatic way
+  const CATEGORIES = [
+    "Produce",
+    "Dairy",
+    "Bakery",
+    "Meat",
+    "Frozen Foods",
+    "Canned Goods",
+    "Dry Goods",
+    "Beverages",
+    "Snacks",
+    "Household",
+    "Other",
+  ];
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -30,10 +45,14 @@ export default function NewItem() {
     >
       {/* Name Field */}
       <div>
-        <label className="block text-gray-700 text-sm font-bold mb-2">
+        <label 
+          htmlFor="name" 
+          className="block text-gray-700 text-sm font-bold mb-2"
+        >
           Item Name
         </label>
         <input
+          id="name"
           type="text"
           placeholder="e.g. Milk"
           required
@@ -47,10 +66,14 @@ export default function NewItem() {
       <div className="flex gap-4">
         {/* Quantity */}
         <div className="w-1/3">
-          <label className="block text-gray-700 text-sm font-bold mb-2">
+          <label 
+            htmlFor="quantity" 
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
             Quantity
           </label>
           <input
+            id="quantity"
             type="number"
             min="1"
             max="99"
@@ -63,25 +86,23 @@ export default function NewItem() {
 
         {/* Category */}
         <div className="w-2/3">
-          <label className="block text-gray-700 text-sm font-bold mb-2">
+          <label 
+            htmlFor="category" 
+            className="block text-gray-700 text-sm font-bold mb-2"
+          >
             Category
           </label>
           <select
+            id="category"
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50 text-gray-900 capitalize"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
-            <option value="produce">Produce</option>
-            <option value="dairy">Dairy</option>
-            <option value="bakery">Bakery</option>
-            <option value="meat">Meat</option>
-            <option value="frozen foods">Frozen Foods</option>
-            <option value="canned goods">Canned Goods</option>
-            <option value="dry goods">Dry Goods</option>
-            <option value="beverages">Beverages</option>
-            <option value="snacks">Snacks</option>
-            <option value="household">Household</option>
-            <option value="other">Other</option>
+            {CATEGORIES.map((cat) => (
+              <option key={cat} value={cat.toLowerCase()}>
+                {cat}
+              </option>
+            ))}
           </select>
         </div>
       </div>
