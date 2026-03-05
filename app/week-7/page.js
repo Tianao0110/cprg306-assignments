@@ -26,7 +26,7 @@ export default function Page() {
 
         <div className="mt-16 border-t border-slate-700 pt-8">
           <h2 className="text-2xl font-bold text-black mb-4 text-center">Wireframe</h2>
-          <p className="text-slate-400 mb-4">
+          <p className="text-slate-400 mb-4 text-center">
             This is the planned design for the Shopping List application.
           </p>
 
