@@ -23,6 +23,20 @@ export default function Page() {
         </div>
 
         <ItemList items={items} />
+
+        <div className="mt-16 border-t border-slate-700 pt-8">
+          <h2 className="text-2xl font-bold text-white mb-4">Wireframe</h2>
+          <p className="text-slate-400 mb-4">
+            This is the planned design for the Shopping List application.
+          </p>
+
+          <img
+            src="/wireframe.png"
+            alt="Wireframe of the Shopping List App"
+            className="w-full rounded-lg border-2 border-slate-700 shadow-lg opacity-80 hover:opacity-100 transition-opacity"
+          />
+        </div>
+        {/* ------------------------------------------- */}
       </div>
     </main>
   );
