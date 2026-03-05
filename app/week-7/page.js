@@ -25,7 +25,7 @@ export default function Page() {
         <ItemList items={items} />
 
         <div className="mt-16 border-t border-slate-700 pt-8">
-          <h2 className="text-2xl font-bold text-white mb-4">Wireframe</h2>
+          <h2 className="text-2xl font-bold text-balck mb-4">Wireframe</h2>
           <p className="text-slate-400 mb-4">
             This is the planned design for the Shopping List application.
           </p>
