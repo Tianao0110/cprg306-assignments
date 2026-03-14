@@ -9,6 +9,7 @@ export default function Home() {
     { id: 5, title: "Week 5 Assignment" },
     { id: 6, title: "Week 6 Assignment" },
     { id: 7, title: "Week 7 Assignment" },
+    { id: 8, title: "Week 8 Assignment" },
   ];
 
   return (
