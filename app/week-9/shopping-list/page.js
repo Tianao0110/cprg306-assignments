@@ -1,11 +1,13 @@
 "use client";
 import { useState } from "react";
+import { useUserAuth } from "../../contexts/AuthContext";
 import NewItem from "./NewItem";
 import ItemList from "./item-list";
 import MealIdeas from "./MealIdeas";
 import itemsData from "./items.json";
 
 export default function Page() {
+  const { user } = useUserAuth();
   const [items, setItems] = useState(itemsData);
   const [selectedItemName, setSelectedItemName] = useState("");
 
@@ -27,6 +29,17 @@ export default function Page() {
       .trim();
     setSelectedItemName(cleanedName);
   };
+
+  if (!user) {
+    return (
+      <main className="bg-stone-100 min-h-screen p-10 flex flex-col justify-center items-center">
+        <p className="text-2xl text-slate-800 font-bold mb-4">Sorry</p>
+        <p className="text-slate-600">
+          Please log in to view your shopping list.
+        </p>
+      </main>
+    );
+  }
 
   return (
     <main className="bg-stone-100 min-h-screen p-6 md:p-10 relative">
