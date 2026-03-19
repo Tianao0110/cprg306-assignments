@@ -1,9 +1,18 @@
 "use client";
 import { useUserAuth } from "../contexts/AuthContext";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 import Link from "next/link";
 
 export default function LandingPage() {
   const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (user) {
+      router.push("/week-9/shopping-list");
+    }
+  }, [user, router]);
 
   const handleSignIn = async () => {
     try {
@@ -13,13 +22,16 @@ export default function LandingPage() {
     }
   };
 
-  const handleSignOut = async () => {
+
+    const handleSignOut = async () => {
     try {
       await firebaseSignOut();
     } catch (error) {
       console.error("Logout failed:", error);
     }
-  };
+  }; 
+
+
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-stone-100 p-6">
