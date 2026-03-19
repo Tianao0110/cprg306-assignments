@@ -43,6 +43,13 @@ export default function Page() {
         <p className="text-slate-600">
           Please log in to view your shopping list.
         </p>
+        <br />
+        <button
+          onClick={() => router.push("/week-9")}
+          className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl transition-colors shadow-md"
+        >
+          &larr; Go to Login Page
+        </button>
       </main>
     );
   }
@@ -86,34 +93,32 @@ export default function Page() {
         </div>
       </header>
 
-      <body>
-        <div className="p-6 md:p-10">
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-start">
-            <div className="w-full md:w-1/2 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm min-h-[500px]">
-              <ItemList
-                items={items}
-                onItemSelect={handleItemSelect}
-                onOpenModal={() => setIsModalOpen(true)}
-              />
-            </div>
+      <div className="p-6 md:p-10">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 items-start">
+          <div className="w-full md:w-1/2 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm min-h-[500px]">
+            <ItemList
+              items={items}
+              onItemSelect={handleItemSelect}
+              onOpenModal={() => setIsModalOpen(true)}
+            />
+          </div>
 
-            <div className="w-full md:w-1/2">
-              <MealIdeas ingredient={selectedItemName} />
-            </div>
+          <div className="w-full md:w-1/2">
+            <MealIdeas ingredient={selectedItemName} />
           </div>
         </div>
+      </div>
 
-        {isModalOpen && (
-          <div className="fixed inset-0 bg-slate-900/60 flex items-center justify-center z-50 backdrop-blur-sm transition-opacity">
-            <div className="animate-in fade-in zoom-in-95 duration-200">
-              <NewItem
-                onAddItem={handleAddItem}
-                onClose={() => setIsModalOpen(false)}
-              />
-            </div>
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-slate-900/60 flex items-center justify-center z-50 backdrop-blur-sm transition-opacity">
+          <div className="animate-in fade-in zoom-in-95 duration-200">
+            <NewItem
+              onAddItem={handleAddItem}
+              onClose={() => setIsModalOpen(false)}
+            />
           </div>
-        )}
-      </body>
+        </div>
+      )}
     </main>
   );
 }
