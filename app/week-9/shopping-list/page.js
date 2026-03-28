@@ -39,7 +39,7 @@ export default function Page() {
   if (!user) {
     return (
       <main className="bg-stone-100 min-h-screen p-10 flex flex-col justify-center items-center text-center">
-        <p className="text-2xl text-slate-800 font-bold mb-4">Sorry !!</p>
+        <p className="text-2xl text-slate-800 font-bold mb-4">Thank for shopping !!</p>
         <p className="text-slate-600">
           Please log in to view your shopping list.
         </p>
