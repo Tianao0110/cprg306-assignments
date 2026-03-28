@@ -11,6 +11,7 @@ export default function Home() {
     { id: 7, title: "Week 7 Assignment" },
     { id: 8, title: "Week 8 Assignment" },
     { id: 9, title: "Week 9 Assignment" },
+    { id: 10, title: "Week 10 Assignment" },
   ];
 
   return (
@@ -25,6 +26,10 @@ export default function Home() {
             opacity: 1;
             transform: translateY(0);
           }
+        }
+
+        .animate-slide-in {
+          animation: slideIn 0.4s ease-out both;
         }
       `}</style>
 
@@ -45,10 +50,9 @@ export default function Home() {
               key={assignment.id}
               href={`/week-${assignment.id}`}
               style={{
-                animation: "slideIn 0.5s ease-out forwards",
-                animationDelay: `${index * 100}ms`,
+                animationDelay: `${index * 40}ms`,
               }}
-              className="opacity-0 group block p-4 bg-white rounded-lg shadow-sm border border-slate-200 hover:shadow-md hover:border-indigo-300 transition-all duration-200 hover:-translate-y-1 text-center"
+              className="animate-slide-in group block p-4 bg-white rounded-lg shadow-sm border border-slate-200 hover:shadow-md hover:border-indigo-300 transition-all duration-200 hover:-translate-y-1 text-center"
             >
               <span className="text-lg font-semibold text-slate-700 group-hover:text-indigo-600 transition-colors">
                 {assignment.title}
